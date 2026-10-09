@@ -46,7 +46,7 @@ export const lookupAbn = createServerFn({ method: "POST" })
       const res = await fetch(lookupUrl, {
         headers: {
           Accept: "text/html",
-          "User-Agent": "TalentOS/1.0 (public ABN Lookup read)",
+          "User-Agent": "Orcenda/1.0 (public ABN Lookup read)",
         },
         signal: AbortSignal.timeout(8000),
       });
