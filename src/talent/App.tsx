@@ -36,11 +36,11 @@ import {
 } from "lucide-react";
 
 const ORCENDA_PILLARS = [
-  { label: "People", detail: "Your team, clients and collaborators in one place." },
-  { label: "Processes", detail: "Jobs, quotes and workflows that move as you do." },
-  { label: "Customers", detail: "Every relationship, from first enquiry to repeat work." },
-  { label: "Finances", detail: "Invoices, money and tax that stay in step." },
-  { label: "Intelligence", detail: "Answers and insight drawn from your own business." },
+  { label: "People", detail: "Your team, clients and collaborators in one place.", icon: Briefcase },
+  { label: "Processes", detail: "Jobs, quotes and workflows that move as you do.", icon: Calendar },
+  { label: "Customers", detail: "Every relationship, from first enquiry to repeat work.", icon: ShoppingBag },
+  { label: "Finances", detail: "Invoices, money and tax that stay in step.", icon: Landmark },
+  { label: "Intelligence", detail: "Answers and insight drawn from your own business.", icon: Sparkles },
 ] as const;
 
 function TalentLanding({ onSignUp, onSample }: { onSignUp: () => void; onSample: () => void }) {
@@ -58,12 +58,11 @@ function TalentLanding({ onSignUp, onSample }: { onSignUp: () => void; onSample:
               <span className="font-medium text-accent">one intelligent system</span>
             </span>
           </div>
-          <p className="mb-5 text-sm font-bold uppercase tracking-[0.18em] text-accent">One business. One intelligent system.</p>
           <h1 className="max-w-xl text-balance font-display text-4xl font-bold leading-[1.05] tracking-[-0.04em] text-ink sm:text-6xl">
-            Your business isn&apos;t built from disconnected departments. Your software shouldn&apos;t be either.
+            One business. One intelligent system.
           </h1>
           <p className="mt-6 max-w-lg text-pretty text-base leading-7 text-muted sm:text-lg">
-            Orcenda unifies the people, processes, customers, finances and intelligence behind your business in one adaptive workspace, built to evolve as you do.
+            Your business isn&apos;t built from disconnected departments. Your software shouldn&apos;t be either. Orcenda brings the people, processes, customers, finances and intelligence behind your business into one adaptive workspace.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
             <button
@@ -91,20 +90,23 @@ function TalentLanding({ onSignUp, onSample }: { onSignUp: () => void; onSample:
             </span>
           </div>
           <div className="grid gap-2.5">
-            {ORCENDA_PILLARS.map((pillar, index) => (
-              <div
-                key={pillar.label}
-                className="flex items-center gap-3 rounded-2xl border border-[color:rgba(20,22,29,0.07)] bg-surface-soft p-3.5 transition-transform hover:-translate-y-0.5"
-              >
-                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-accent-soft font-mono text-xs font-bold text-accent">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <div className="min-w-0">
-                  <p className="font-display text-sm font-bold text-ink">{pillar.label}</p>
-                  <p className="truncate text-xs leading-5 text-muted">{pillar.detail}</p>
+            {ORCENDA_PILLARS.map((pillar) => {
+              const Icon = pillar.icon;
+              return (
+                <div
+                  key={pillar.label}
+                  className="flex items-center gap-3 rounded-2xl border border-[color:rgba(20,22,29,0.07)] bg-surface-soft p-3.5 transition-transform hover:-translate-y-0.5"
+                >
+                  <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-accent-soft text-accent">
+                    <Icon className="h-4 w-4" />
+                  </span>
+                  <div className="min-w-0">
+                    <p className="font-display text-sm font-bold text-ink">{pillar.label}</p>
+                    <p className="truncate text-xs leading-5 text-muted">{pillar.detail}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
           <div className="mt-4 flex items-center justify-center gap-2 rounded-2xl bg-accent px-4 py-3 text-sm font-bold text-[#fff]">
             <Sparkles className="h-4 w-4" />
