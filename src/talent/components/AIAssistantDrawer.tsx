@@ -155,8 +155,8 @@ export const AIAssistantDrawer: React.FC<AIAssistantDrawerProps> = ({
             <Sparkles className="h-5 w-5" />
           </div>
           <img
-            src="/talentos-logo.png"
-            alt="Talentos"
+            src="/orcenda-logo.png"
+            alt="Orcenda"
             className="h-6 w-auto max-w-[96px] object-contain object-left sm:h-7 sm:max-w-[120px]"
           />
           <div>

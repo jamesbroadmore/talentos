@@ -67,7 +67,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({
           <div>
             <div className="text-xs uppercase tracking-wider text-emerald-400 font-mono">Australian Business Onboarding</div>
             <h2 className="text-lg font-semibold text-white">
-              {step === 1 && 'Welcome to TalentOS'}
+              {step === 1 && 'Welcome to Orcenda'}
               {step === 2 && 'Step 1: ABN Identity Gate'}
               {step === 3 && 'Step 2: Australian Tax Profile'}
               {step === 4 && 'Step 3: Operating Profile'}
@@ -193,7 +193,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({
                     <User className="w-4 h-4 text-emerald-400" />
                     Sole Trader (Individual)
                   </div>
-                  <p className="mt-1 text-[11px] text-neutral-500">TalentOS is built for Australian sole traders.</p>
+                  <p className="mt-1 text-[11px] text-neutral-500">Orcenda is built for Australian sole traders.</p>
                 </div>
               </div>
 
@@ -474,7 +474,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({
                   Business Compliance Map Generated
                 </div>
                 <p className="text-xs text-neutral-300 leading-relaxed">
-                  Based on your ABN ({formData.abn || "not entered yet"}) as a sole trader in {industryById(opData.industryModule).label}, TalentOS has set up your books. Lodging stays with you or your agent.
+                  Based on your ABN ({formData.abn || "not entered yet"}) as a sole trader in {industryById(opData.industryModule).label}, Orcenda has set up your books. Lodging stays with you or your agent.
                 </p>
               </div>
 

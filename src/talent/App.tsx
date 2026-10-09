@@ -35,32 +35,40 @@ import {
   ArrowRight,
 } from "lucide-react";
 
+const ORCENDA_PILLARS = [
+  { label: "People", detail: "Your team, clients and collaborators in one place." },
+  { label: "Processes", detail: "Jobs, quotes and workflows that move as you do." },
+  { label: "Customers", detail: "Every relationship, from first enquiry to repeat work." },
+  { label: "Finances", detail: "Invoices, money and tax that stay in step." },
+  { label: "Intelligence", detail: "Answers and insight drawn from your own business." },
+] as const;
+
 function TalentLanding({ onSignUp, onSample }: { onSignUp: () => void; onSample: () => void }) {
   return (
     <section className="fixed inset-0 z-50 flex min-h-screen items-center overflow-y-auto bg-canvas px-5 py-10 sm:px-8 lg:px-12">
-      <div className="mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
+      <div className="mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
         <div className="max-w-2xl">
           <div className="mb-10 flex items-center gap-4">
             <span className="font-display text-4xl font-extrabold leading-none tracking-[-0.05em] text-ink sm:text-5xl">
-              talent<span className="brand-gradient-text">OS</span>
+              Orc<span className="brand-gradient-text">enda</span>
             </span>
             <span className="border-l border-accent/30 pl-3 text-sm font-semibold leading-tight text-ink sm:text-base">
               by cdxi
               <br />
-              <span className="font-medium text-accent">business, sorted</span>
+              <span className="font-medium text-accent">one intelligent system</span>
             </span>
           </div>
-          <p className="mb-5 text-sm font-bold uppercase tracking-[0.18em] text-accent">For Australian sole traders</p>
+          <p className="mb-5 text-sm font-bold uppercase tracking-[0.18em] text-accent">One business. One intelligent system.</p>
           <h1 className="max-w-xl text-balance font-display text-4xl font-bold leading-[1.05] tracking-[-0.04em] text-ink sm:text-6xl">
-            Spend less time chasing the business stuff.
+            Your business isn&apos;t built from disconnected departments. Your software shouldn&apos;t be either.
           </h1>
           <p className="mt-6 max-w-lg text-pretty text-base leading-7 text-muted sm:text-lg">
-            Jobs, invoices, GST, and the BAS — for any sole trader. The sample studio is a creator. Your own books follow the trade you pick.
+            Orcenda unifies the people, processes, customers, finances and intelligence behind your business in one adaptive workspace, built to evolve as you do.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
             <button
               onClick={onSample}
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-5 py-3 text-sm font-bold text-[#fff] shadow-[0_12px_30px_-6px_rgba(116,52,209,0.5)] transition-all hover:-translate-y-px hover:bg-accent-strong active:scale-[0.98]"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-5 py-3 text-sm font-bold text-[#fff] shadow-[0_12px_30px_-6px_rgba(79,70,229,0.5)] transition-all hover:-translate-y-px hover:bg-accent-strong active:scale-[0.98]"
             >
               Open the sample studio <ArrowRight className="h-4 w-4" />
             </button>
@@ -75,18 +83,33 @@ function TalentLanding({ onSignUp, onSample }: { onSignUp: () => void; onSample:
             Sample books are fictional and stay in this browser. Your own books do too.
           </p>
         </div>
-        <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
-          {[
-            ["01", "See a real set of books", "A creator’s sample: brand deals, GST, and a BAS already in motion."],
-            ["02", "Raise the invoice", "Turn a booking or quote into a tax invoice without double-counting GST."],
-            ["03", "Ask Lex", "GST, super, platform fees and usage rights, explained without the jargon."],
-          ].map(([number, title, detail]) => (
-            <div key={number} className="glass rounded-2xl p-5 transition-transform hover:-translate-y-0.5">
-              <span className="font-mono text-xs font-bold text-accent">{number}</span>
-              <h2 className="mt-4 font-display text-lg font-bold text-ink">{title}</h2>
-              <p className="mt-1 text-sm leading-6 text-muted">{detail}</p>
-            </div>
-          ))}
+        <div className="glass rounded-3xl p-6 sm:p-8">
+          <div className="mb-6 flex items-center justify-between">
+            <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-faint">One adaptive workspace</p>
+            <span className="flex items-center gap-1.5 rounded-full bg-accent-soft px-2.5 py-1 text-[10px] font-semibold text-accent">
+              <span className="h-1.5 w-1.5 rounded-full bg-accent" /> Unified
+            </span>
+          </div>
+          <div className="grid gap-2.5">
+            {ORCENDA_PILLARS.map((pillar, index) => (
+              <div
+                key={pillar.label}
+                className="flex items-center gap-3 rounded-2xl border border-[color:rgba(20,22,29,0.07)] bg-surface-soft p-3.5 transition-transform hover:-translate-y-0.5"
+              >
+                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-accent-soft font-mono text-xs font-bold text-accent">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <div className="min-w-0">
+                  <p className="font-display text-sm font-bold text-ink">{pillar.label}</p>
+                  <p className="truncate text-xs leading-5 text-muted">{pillar.detail}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-4 flex items-center justify-center gap-2 rounded-2xl bg-accent px-4 py-3 text-sm font-bold text-[#fff]">
+            <Sparkles className="h-4 w-4" />
+            One system, working together
+          </div>
         </div>
       </div>
     </section>
@@ -161,10 +184,10 @@ function AppContent() {
       <div className="grid min-h-screen place-items-center bg-canvas text-ink">
         <div className="text-center">
           <p className="font-display text-3xl font-extrabold tracking-tight">
-            talent<span className="brand-gradient-text">OS</span>
+            Orc<span className="brand-gradient-text">enda</span>
           </p>
-          <p className="mt-1 text-xs font-semibold uppercase tracking-[0.16em] text-muted">by cdxi</p>
-          <p className="mt-2 text-sm text-muted">Opening your books…</p>
+          <p className="mt-1 text-xs font-semibold uppercase tracking-[0.16em] text-muted">by cdxi · one intelligent system</p>
+          <p className="mt-2 text-sm text-muted">Opening your workspace…</p>
         </div>
       </div>
     );
@@ -197,16 +220,16 @@ function AppContent() {
       )}
 
       <header className="sticky top-0 z-40 flex min-h-16 items-center justify-between gap-2 border-b border-neutral-800 bg-canvas/90 px-3 py-2.5 backdrop-blur-2xl sm:gap-3 sm:px-5">
-        <button className="flex min-w-0 flex-1 items-center gap-2.5 text-left sm:gap-3" onClick={() => setActiveTab("dashboard")} aria-label="talentOS by cdxi">
+        <button className="flex min-w-0 flex-1 items-center gap-2.5 text-left sm:gap-3" onClick={() => setActiveTab("dashboard")} aria-label="Orcenda by cdxi">
           <img
-            src="/talentos-logo.png"
-            alt="talentOS"
+            src="/orcenda-logo.png"
+            alt="Orcenda"
             className="h-10 w-auto max-w-[112px] shrink-0 object-contain object-left sm:h-11 sm:max-w-[132px]"
           />
           <span className="hidden min-w-0 sm:block">
             <span className="block truncate font-display text-[1.65rem] font-extrabold leading-none tracking-[-0.05em]">
-              <span className="text-ink">talent</span>
-              <span className="brand-gradient-text">OS</span>
+              <span className="text-ink">Orc</span>
+              <span className="brand-gradient-text">enda</span>
             </span>
             <span className="mt-1 block truncate text-[11px] font-semibold leading-none text-muted">
               by cdxi
@@ -356,9 +379,9 @@ function AppContent() {
             <div className="absolute inset-x-0 bottom-[calc(env(safe-area-inset-bottom)+4.25rem)] max-h-[78vh] overflow-y-auto rounded-t-3xl border border-neutral-800 bg-canvas px-4 pb-4 pt-3 shadow-2xl">
               <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-neutral-700" />
               <p className="font-display text-2xl font-extrabold leading-none tracking-[-0.04em]">
-                talent<span className="brand-gradient-text">OS</span>
+                Orc<span className="brand-gradient-text">enda</span>
               </p>
-              <p className="mt-1 text-xs font-semibold text-muted">by cdxi · the colour follows your industry</p>
+              <p className="mt-1 text-xs font-semibold text-muted">by cdxi · one intelligent system</p>
               <p className="mb-2 mt-4 text-[10px] font-bold uppercase tracking-[0.16em] text-faint">Industry</p>
               <div className="grid grid-cols-2 gap-2">
                 {INDUSTRIES.map((item) => {

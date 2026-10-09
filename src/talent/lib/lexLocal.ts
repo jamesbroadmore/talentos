@@ -71,7 +71,7 @@ export function localLexAnswer(question: string, gstRegistered: boolean): LexAns
   if (q.includes("bas") || q.includes("quarter")) {
     return {
       reply:
-        "A quarterly BAS for a cash-basis creator mainly reports G1 total sales and 1A GST on sales, then 1B GST credits on business purchases. Net GST is 1A minus 1B. PAYG withholding (W1/W2) only applies if you have employees or contractors you withhold from.\n\nLock the period in Compliance once the bank is reconciled. Do not lodge from TalentOS — this prepares the figures for you or your tax agent.",
+        "A quarterly BAS for a cash-basis creator mainly reports G1 total sales and 1A GST on sales, then 1B GST credits on business purchases. Net GST is 1A minus 1B. PAYG withholding (W1/W2) only applies if you have employees or contractors you withhold from.\n\nLock the period in Compliance once the bank is reconciled. Do not lodge from Orcenda — this prepares the figures for you or your tax agent.",
       sources: [{ title: "ATO — BAS", uri: `${ATO}/businesses-and-organisations/gst-excise-and-indirect-taxes/gst/lodging-your-bas` }],
     };
   }

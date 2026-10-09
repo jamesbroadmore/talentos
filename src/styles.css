@@ -6,12 +6,12 @@
   --font-display: "Space Grotesk", "Geist", ui-sans-serif, system-ui, sans-serif;
 
   /* Canvas + ink — bright / light theme */
-  --color-canvas: #f4f6fb;
-  --color-ink: #11131a;
-  --color-muted: #4d5563;
-  --color-faint: #687180;
+  --color-canvas: #f6f5f1;
+  --color-ink: #16151c;
+  --color-muted: #4c4a55;
+  --color-faint: #6b6875;
   --color-surface: #ffffff;
-  --color-surface-soft: #f7f8fc;
+  --color-surface-soft: #f7f6f2;
 
   /* Flip the pure-white token to dark ink. The app styles surfaces, borders,
      hover states and dividers with white/N alpha tints and marks headings with
@@ -20,18 +20,18 @@
      Colored buttons that genuinely need white text use the literal text-[#fff]. */
   --color-white: #14161d;
 
-  /* TalentOS brand accent — violet core of the OS gradient */
-  --color-accent: #7434d1;
-  --color-accent-strong: #5d20b5;
-  --color-accent-soft: rgba(116, 52, 209, 0.12);
-  --color-cyan: #29c1ff;
+  /* Orcenda brand accent — deep indigo core of the unified system */
+  --color-accent: #4f46e5;
+  --color-accent-strong: #4338ca;
+  --color-accent-soft: rgba(79, 70, 229, 0.12);
+  --color-cyan: #22b8cf;
 
-  /* TalentOS brand gradient stops (pink → blue → cyan → violet) */
-  --color-brand-pink: #ff2ec6;
-  --color-brand-magenta: #e831c0;
-  --color-brand-blue: #2c6bf0;
-  --color-brand-cyan: #29c1ff;
-  --color-brand-violet: #8b3cf0;
+  /* Orcenda brand gradient stops (indigo → violet → fuchsia) */
+  --color-brand-pink: #d946ef;
+  --color-brand-magenta: #c026d3;
+  --color-brand-blue: #6366f1;
+  --color-brand-cyan: #22b8cf;
+  --color-brand-violet: #8b5cf6;
 
   /* Status colours — always paired with icon + text */
   --color-ok: #16784b;
@@ -39,32 +39,32 @@
   --color-alert: #b52f2a;
   --color-info: #1769a8;
 
-  /* Rebrand: remap the legacy emerald/teal utility scales to the TalentOS
-     violet + cyan brand so the ~330 hardcoded emerald-* / teal-* classes
+  /* Rebrand: remap the legacy emerald/teal utility scales to the Orcenda
+     indigo + cyan brand so the ~330 hardcoded emerald-* / teal-* classes
      across the app adopt the new palette without per-file edits. */
-  --color-emerald-50: #f4ecff;
-  --color-emerald-100: #e8dbff;
-  --color-emerald-200: #cdb2ff;
-  --color-emerald-300: #b389ff;
-  --color-emerald-400: #9a5cff;
-  --color-emerald-500: #8b3cf0;
-  --color-emerald-600: #7a29e0;
-  --color-emerald-700: #6420bd;
-  --color-emerald-800: #4d1a90;
-  --color-emerald-900: #371266;
-  --color-emerald-950: #21093f;
+  --color-emerald-50: #eef2ff;
+  --color-emerald-100: #e0e7ff;
+  --color-emerald-200: #c7d2fe;
+  --color-emerald-300: #a5b4fc;
+  --color-emerald-400: #818cf8;
+  --color-emerald-500: #6366f1;
+  --color-emerald-600: #4f46e5;
+  --color-emerald-700: #4338ca;
+  --color-emerald-800: #3730a3;
+  --color-emerald-900: #312e81;
+  --color-emerald-950: #1e1b4b;
 
-  --color-teal-50: #ecf8ff;
-  --color-teal-100: #d6efff;
-  --color-teal-200: #a9dfff;
-  --color-teal-300: #6fcbff;
-  --color-teal-400: #35b6ff;
-  --color-teal-500: #1f9dff;
-  --color-teal-600: #187ce6;
-  --color-teal-700: #155fb8;
-  --color-teal-800: #16478c;
-  --color-teal-900: #143a6e;
-  --color-teal-950: #0c2145;
+  --color-teal-50: #ecfeff;
+  --color-teal-100: #cffafe;
+  --color-teal-200: #a5f3fc;
+  --color-teal-300: #67e8f9;
+  --color-teal-400: #22d3ee;
+  --color-teal-500: #06b6d4;
+  --color-teal-600: #0891b2;
+  --color-teal-700: #0e7490;
+  --color-teal-800: #155e75;
+  --color-teal-900: #164e63;
+  --color-teal-950: #083344;
 
   /* Light theme: invert the neutral lightness ramp so every hardcoded
      bg-neutral-950/900/800 (dark surfaces), border-neutral-800/700 and
@@ -98,7 +98,7 @@
   }
 
   html {
-    background-color: #f5f6fb;
+    background-color: #f6f5f1;
   }
 
   body {
@@ -108,7 +108,7 @@
     background:
       radial-gradient(circle at top left, var(--glow-a), transparent 34%),
       radial-gradient(circle at bottom right, var(--glow-b), transparent 36%),
-      #f5f6fb;
+      #f6f5f1;
     background-attachment: fixed;
     color: var(--color-ink);
     font-family: var(--font-sans);
@@ -182,14 +182,13 @@
     box-shadow: 0 0 0 1px rgba(139, 60, 240, 0.3), 0 16px 44px rgba(139, 60, 240, 0.16);
   }
 
-  /* TalentOS wordmark gradient — the OS half of the logo */
+  /* Orcenda wordmark gradient — the unified-system half of the logo */
   .brand-gradient-text {
     background: linear-gradient(
       100deg,
-      var(--color-brand-cyan) 0%,
-      var(--color-brand-blue) 28%,
-      var(--color-brand-violet) 60%,
-      var(--color-brand-pink) 100%
+      var(--color-brand-blue) 0%,
+      var(--color-brand-violet) 45%,
+      var(--color-brand-magenta) 100%
     );
     -webkit-background-clip: text;
     background-clip: text;

@@ -144,7 +144,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
             <div>
               <h2 className="text-base font-semibold text-white">System Settings & Preferences</h2>
               <p className="text-xs text-neutral-400">
-                Personalize your TalentOS workspace, theme, notifications, and cloud identity
+                Personalize your Orcenda workspace, theme, notifications, and cloud identity
               </p>
             </div>
           </div>
@@ -301,7 +301,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                 <div>
                   <h3 className="text-sm font-semibold text-white">Industry colour</h3>
                   <p className="mt-0.5 text-xs text-neutral-400">
-                    talentOS by cdxi takes its colour from the trade on the books. Job names change with it.
+                    Orcenda by cdxi takes its colour from the trade on the books. Job names change with it.
                   </p>
                   <div className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-2">
                     {INDUSTRIES.map((item) => {

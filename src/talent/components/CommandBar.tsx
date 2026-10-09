@@ -68,7 +68,7 @@ export const CommandBar: React.FC<CommandBarProps> = ({ open, onClose, onNavigat
 
   return (
     <GlassModal open={open} onClose={onClose} size="md" align="top" showClose={false} labelledBy="ask-title">
-      <h2 id="ask-title" className="sr-only">Ask TalentOS</h2>
+      <h2 id="ask-title" className="sr-only">Ask Orcenda</h2>
       <div className="flex items-center gap-3 border-b border-white/10 pb-4">
         <Search className="h-5 w-5 shrink-0 text-accent" />
         <input

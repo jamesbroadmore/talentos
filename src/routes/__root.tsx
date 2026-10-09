@@ -3,7 +3,7 @@ import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import appCss from "../styles.css?url";
 
-const APP_NAME = "talentOS";
+const APP_NAME = "Orcenda";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -13,12 +13,12 @@ export const Route = createRootRoute({
       { title: APP_NAME },
       {
         name: "description",
-        content: "talentOS by cdxi. Jobs, invoices, GST and BAS for Australian sole traders.",
+        content: "Orcenda by cdxi. One business, one intelligent system — people, processes, customers, finances and intelligence in one adaptive workspace.",
       },
-      { name: "theme-color", content: "#7434d1" },
-      { name: "application-name", content: "talentOS" },
+      { name: "theme-color", content: "#4f46e5" },
+      { name: "application-name", content: "Orcenda" },
       { name: "author", content: "cdxi" },
-      { name: "apple-mobile-web-app-title", content: "talentOS" },
+      { name: "apple-mobile-web-app-title", content: "Orcenda" },
     ],
     links: [
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
