@@ -225,7 +225,8 @@ function AppContent() {
             className="h-10 w-auto max-w-[112px] shrink-0 object-contain object-left sm:h-11 sm:max-w-[132px]"
           />
           <span className="hidden min-w-0 sm:block">
-            <span className="block truncate text-[11px] font-semibold leading-none text-muted">
+            <span className="block truncate text-sm font-bold leading-none tracking-tight text-ink">Orcenda</span>
+            <span className="mt-1 block truncate text-[10px] font-semibold uppercase leading-none tracking-[0.12em] text-muted">
               by cdxi
               <span className="text-faint"> · </span>
               <span className="text-accent">{trade.label}</span>
@@ -294,7 +295,17 @@ function AppContent() {
 
       <div className="flex flex-1 overflow-hidden">
         <aside className={`${moreOpen ? "lg:flex" : "lg:hidden"} hidden w-60 shrink-0 flex-col justify-between border-r border-accent/20 bg-accent p-3 text-[#fff] shadow-[8px_0_30px_rgba(15,76,129,0.12)] backdrop-blur-xl transition-[width,opacity] duration-200 xl:w-64`}>
-          <nav className="space-y-1">
+          <div>
+            <button onClick={() => setActiveTab("dashboard")} className="mb-7 flex w-full items-center gap-3 rounded-2xl border border-[#ffffff]/15 bg-[#ffffff]/10 p-3 text-left hover:bg-[#ffffff]/15" aria-label="Go to Orcenda dashboard">
+              <span className="grid h-11 w-11 shrink-0 place-items-center overflow-hidden rounded-xl bg-[#ffffff] p-1.5">
+                <img src="/orcenda-logo.png" alt="Orcenda" className="h-full w-full object-contain" />
+              </span>
+              <span className="min-w-0">
+                <span className="block truncate text-sm font-bold tracking-tight text-[#ffffff]">Orcenda</span>
+                <span className="block truncate text-[10px] font-semibold uppercase tracking-[0.14em] text-[#b9d7e8]">by cdxi</span>
+              </span>
+            </button>
+            <nav className="space-y-1">
             <div className="px-3 pb-2 text-[10px] font-bold uppercase tracking-[0.18em] text-[#b9d7e8]">Your business</div>
             {navItems.map((item) => {
               const Icon = item.icon;
@@ -340,6 +351,7 @@ function AppContent() {
               </button>
             </div>
           </nav>
+          </div>
           <div className="space-y-2">
             <div className="space-y-1 rounded-2xl border border-[#ffffff]/15 bg-[#ffffff]/10 p-3 text-xs">
               <div className="flex items-center justify-between">
