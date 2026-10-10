@@ -49,9 +49,7 @@ function TalentLanding({ onSignUp, onSample }: { onSignUp: () => void; onSample:
       <div className="mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
         <div className="max-w-2xl">
           <div className="mb-10 flex items-center gap-4">
-            <span className="font-display text-4xl font-extrabold leading-none tracking-[-0.05em] text-ink sm:text-5xl">
-              Orc<span className="brand-gradient-text">enda</span>
-            </span>
+            <img src="/orcenda-logo.png" alt="Orcenda" className="h-12 w-auto max-w-[180px] object-contain object-left sm:h-14 sm:max-w-[220px]" />
             <span className="border-l border-accent/30 pl-3 text-sm font-semibold leading-tight text-ink sm:text-base">
               by cdxi
               <br />
@@ -185,10 +183,8 @@ function AppContent() {
     return (
       <div className="grid min-h-screen place-items-center bg-canvas text-ink">
         <div className="text-center">
-          <p className="font-display text-3xl font-extrabold tracking-tight">
-            Orc<span className="brand-gradient-text">enda</span>
-          </p>
-          <p className="mt-1 text-xs font-semibold uppercase tracking-[0.16em] text-muted">by cdxi · one intelligent system</p>
+          <img src="/orcenda-logo.png" alt="Orcenda" className="mx-auto h-12 w-auto max-w-[180px] object-contain" />
+          <p className="mt-2 text-xs font-semibold uppercase tracking-[0.16em] text-muted">by cdxi · one intelligent system</p>
           <p className="mt-2 text-sm text-muted">Opening your workspace…</p>
         </div>
       </div>
@@ -229,11 +225,7 @@ function AppContent() {
             className="h-10 w-auto max-w-[112px] shrink-0 object-contain object-left sm:h-11 sm:max-w-[132px]"
           />
           <span className="hidden min-w-0 sm:block">
-            <span className="block truncate font-display text-[1.65rem] font-extrabold leading-none tracking-[-0.05em]">
-              <span className="text-ink">Orc</span>
-              <span className="brand-gradient-text">enda</span>
-            </span>
-            <span className="mt-1 block truncate text-[11px] font-semibold leading-none text-muted">
+            <span className="block truncate text-[11px] font-semibold leading-none text-muted">
               by cdxi
               <span className="text-faint"> · </span>
               <span className="text-accent">{trade.label}</span>
@@ -380,9 +372,7 @@ function AppContent() {
             <button className="absolute inset-0 bg-black/45" aria-label="Close menu" onClick={() => setMoreOpen(false)} />
             <div className="absolute inset-x-0 bottom-[calc(env(safe-area-inset-bottom)+4.25rem)] max-h-[78vh] overflow-y-auto rounded-t-3xl border border-neutral-800 bg-canvas px-4 pb-4 pt-3 shadow-2xl">
               <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-neutral-700" />
-              <p className="font-display text-2xl font-extrabold leading-none tracking-[-0.04em]">
-                Orc<span className="brand-gradient-text">enda</span>
-              </p>
+              <img src="/orcenda-logo.png" alt="Orcenda" className="h-9 w-auto max-w-[150px] object-contain" />
               <p className="mt-1 text-xs font-semibold text-muted">by cdxi · one intelligent system</p>
               <p className="mb-2 mt-4 text-[10px] font-bold uppercase tracking-[0.16em] text-faint">Industry</p>
               <div className="grid grid-cols-2 gap-2">

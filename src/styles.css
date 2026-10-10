@@ -20,18 +20,18 @@
      Colored buttons that genuinely need white text use the literal text-[#fff]. */
   --color-white: #14161d;
 
-  /* Orcenda brand accent — deep indigo core of the unified system */
-  --color-accent: #4f46e5;
-  --color-accent-strong: #4338ca;
-  --color-accent-soft: rgba(79, 70, 229, 0.12);
-  --color-cyan: #22b8cf;
+  /* Orcenda brand accent — midnight navy with a clear cyan signal */
+  --color-accent: #0f4c81;
+  --color-accent-strong: #0a3558;
+  --color-accent-soft: rgba(15, 76, 129, 0.12);
+  --color-cyan: #11a8b8;
 
-  /* Orcenda brand gradient stops (indigo → violet → fuchsia) */
-  --color-brand-pink: #d946ef;
-  --color-brand-magenta: #c026d3;
-  --color-brand-blue: #6366f1;
-  --color-brand-cyan: #22b8cf;
-  --color-brand-violet: #8b5cf6;
+  /* Orcenda brand colors — navy, cyan, and a small coral signal */
+  --color-brand-pink: #e76f51;
+  --color-brand-magenta: #d95d43;
+  --color-brand-blue: #0f4c81;
+  --color-brand-cyan: #11a8b8;
+  --color-brand-violet: #176b96;
 
   /* Status colours — always paired with icon + text */
   --color-ok: #16784b;
@@ -47,12 +47,12 @@
   --color-emerald-200: #c7d2fe;
   --color-emerald-300: #a5b4fc;
   --color-emerald-400: #818cf8;
-  --color-emerald-500: #6366f1;
-  --color-emerald-600: #4f46e5;
-  --color-emerald-700: #4338ca;
-  --color-emerald-800: #3730a3;
-  --color-emerald-900: #312e81;
-  --color-emerald-950: #1e1b4b;
+  --color-emerald-500: #176b96;
+  --color-emerald-600: #0f4c81;
+  --color-emerald-700: #0a3558;
+  --color-emerald-800: #082b47;
+  --color-emerald-900: #062138;
+  --color-emerald-950: #031522;
 
   --color-teal-50: #ecfeff;
   --color-teal-100: #cffafe;
@@ -88,8 +88,8 @@
 @layer base {
   :root {
     color-scheme: light;
-    --glow-a: hsl(272 62% 50% / 0.1);
-    --glow-b: hsl(300 62% 48% / 0.09);
+    --glow-a: hsl(195 70% 42% / 0.1);
+    --glow-b: hsl(18 72% 56% / 0.08);
   }
 
   button:not(:disabled),
@@ -126,8 +126,8 @@
   }
 
   ::selection {
-    background: rgba(139, 60, 240, 0.2);
-    color: #2a0f52;
+    background: rgba(17, 168, 184, 0.2);
+    color: #08344d;
   }
 
   :focus-visible {
@@ -179,16 +179,16 @@
   }
 
   .accent-glow {
-    box-shadow: 0 0 0 1px rgba(139, 60, 240, 0.3), 0 16px 44px rgba(139, 60, 240, 0.16);
+    box-shadow: 0 0 0 1px rgba(17, 168, 184, 0.3), 0 16px 44px rgba(15, 76, 129, 0.16);
   }
 
-  /* Orcenda wordmark gradient — the unified-system half of the logo */
+  /* Orcenda wordmark treatment — navy into cyan, with a coral finish */
   .brand-gradient-text {
     background: linear-gradient(
       100deg,
       var(--color-brand-blue) 0%,
-      var(--color-brand-violet) 45%,
-      var(--color-brand-magenta) 100%
+      var(--color-brand-cyan) 58%,
+      var(--color-brand-pink) 100%
     );
     -webkit-background-clip: text;
     background-clip: text;

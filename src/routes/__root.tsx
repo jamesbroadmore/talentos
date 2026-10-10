@@ -15,7 +15,7 @@ export const Route = createRootRoute({
         name: "description",
         content: "Orcenda by cdxi. One business, one intelligent system — people, processes, customers, finances and intelligence in one adaptive workspace.",
       },
-      { name: "theme-color", content: "#4f46e5" },
+      { name: "theme-color", content: "#0f4c81" },
       { name: "application-name", content: "Orcenda" },
       { name: "author", content: "cdxi" },
       { name: "apple-mobile-web-app-title", content: "Orcenda" },

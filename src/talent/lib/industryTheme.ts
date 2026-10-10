@@ -2,7 +2,7 @@ import type { IndustryModule } from "./industries";
 
 /** One accent per industry. Creator keeps the Orcenda indigo. */
 const THEMES: Record<IndustryModule, { h: number; s: number; accent: string }> = {
-  creator: { h: 243, s: 75, accent: "#4f46e5" },
+  creator: { h: 195, s: 70, accent: "#0f4c81" },
   trades: { h: 18, s: 86, accent: "#c2410c" },
   professional: { h: 221, s: 76, accent: "#1d4ed8" },
   health: { h: 175, s: 78, accent: "#0f766e" },
