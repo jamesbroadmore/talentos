@@ -265,9 +265,11 @@ export const HomeDashboard: React.FC<HomeDashboardProps> = ({
   const progressPercent = Math.round((completedMilestones / ownerMilestones.length) * 100);
 
   return (
-    <div className="mx-auto max-w-6xl space-y-4 pb-8 sm:space-y-6 sm:pb-12 animate-rise">
+    <div className="mx-auto max-w-7xl space-y-5 pb-8 sm:space-y-7 sm:pb-12 animate-rise">
       {/* Greeting + primary actions */}
-      <GlassCard elevated className="flex flex-col gap-4 p-4 sm:gap-5 sm:p-6 md:flex-row md:items-center md:justify-between">
+      <GlassCard elevated className="relative overflow-hidden border-accent/20 bg-surface p-5 sm:p-7 md:flex-row md:items-center md:justify-between">
+        <span className="absolute inset-y-0 left-0 w-1.5 bg-accent" aria-hidden="true" />
+        <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
         <div className="min-w-0">
           <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] font-mono text-muted">
             {creator.creatorHandle ? (
@@ -283,21 +285,21 @@ export const HomeDashboard: React.FC<HomeDashboardProps> = ({
           <h1 className="mt-1 font-display text-2xl font-bold tracking-tight text-ink text-balance">
             {hello}, {firstName}.
           </h1>
-          <p className="mt-1 max-w-md text-sm text-muted text-pretty">
-            Here’s what to do next — no jargon, no fuss.
+          <p className="mt-1 max-w-md text-sm leading-6 text-muted text-pretty">
+            Your business at a glance. Start with what needs your attention today.
           </p>
         </div>
 
         <div className="flex w-full flex-col gap-2 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center">
           <button
             onClick={() => onOpenQuickAdd('booking')}
-            className="inline-flex min-h-11 w-full items-center justify-center gap-1.5 rounded-xl border border-neutral-700/60 bg-neutral-900 px-3.5 py-2 text-xs font-semibold text-ink transition-colors hover:bg-neutral-800 sm:w-auto"
+            className="inline-flex min-h-11 w-full items-center justify-center gap-1.5 rounded-xl border border-accent/20 bg-canvas px-3.5 py-2 text-xs font-semibold text-ink transition-colors hover:border-accent/40 hover:bg-accent-soft sm:w-auto"
           >
             <Plus className="h-3.5 w-3.5" /> New {trade.jobNoun.toLowerCase()}
           </button>
           <button
             onClick={() => onOpenQuickAdd('invoice')}
-            className="inline-flex min-h-11 w-full items-center justify-center gap-1.5 rounded-xl bg-accent px-3.5 py-2 text-xs font-semibold text-[#fff] shadow-[0_8px_24px_rgba(139,60,240,0.28)] transition-colors hover:bg-accent-strong sm:w-auto"
+            className="inline-flex min-h-11 w-full items-center justify-center gap-1.5 rounded-xl bg-accent px-3.5 py-2 text-xs font-semibold text-[#fff] shadow-[0_8px_24px_rgba(15,76,129,0.22)] transition-colors hover:bg-accent-strong sm:w-auto"
           >
             <FileText className="h-3.5 w-3.5" /> Issue tax invoice
           </button>
@@ -308,6 +310,7 @@ export const HomeDashboard: React.FC<HomeDashboardProps> = ({
           >
             <Sparkles className="h-3.5 w-3.5" /> Ask Lex
           </button>
+        </div>
         </div>
       </GlassCard>
 

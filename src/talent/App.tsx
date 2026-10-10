@@ -201,7 +201,7 @@ function AppContent() {
   }
 
   return (
-    <div className="flex min-h-screen flex-col bg-neutral-950 text-neutral-100 antialiased selection:bg-emerald-500/30 selection:text-emerald-200">
+    <div className="flex min-h-screen flex-col bg-canvas text-ink antialiased selection:bg-teal-500/20 selection:text-accent">
       {!books.onboarded && (
         <OnboardingModal
           isOpen
@@ -217,7 +217,7 @@ function AppContent() {
         />
       )}
 
-      <header className="sticky top-0 z-40 flex min-h-16 items-center justify-between gap-2 border-b border-neutral-800 bg-canvas/90 px-3 py-2.5 backdrop-blur-2xl sm:gap-3 sm:px-5">
+      <header className="sticky top-0 z-40 flex min-h-20 items-center justify-between gap-3 border-b border-[color:rgba(15,76,129,0.14)] bg-surface/90 px-4 py-3 backdrop-blur-2xl sm:px-6">
         <button className="flex min-w-0 flex-1 items-center gap-2.5 text-left sm:gap-3" onClick={() => setActiveTab("dashboard")} aria-label="Orcenda by cdxi">
           <img
             src="/orcenda-logo.png"
@@ -293,9 +293,9 @@ function AppContent() {
       )}
 
       <div className="flex flex-1 overflow-hidden">
-        <aside className={`${moreOpen ? "lg:flex" : "lg:hidden"} hidden w-56 shrink-0 flex-col justify-between border-r border-neutral-800 bg-canvas/70 p-3 backdrop-blur-xl transition-[width,opacity] duration-200 xl:w-64`}>
+        <aside className={`${moreOpen ? "lg:flex" : "lg:hidden"} hidden w-60 shrink-0 flex-col justify-between border-r border-accent/20 bg-accent p-3 text-[#fff] shadow-[8px_0_30px_rgba(15,76,129,0.12)] backdrop-blur-xl transition-[width,opacity] duration-200 xl:w-64`}>
           <nav className="space-y-1">
-            <div className="px-3 pb-2 text-[10px] font-medium uppercase tracking-wider text-faint">Your business</div>
+            <div className="px-3 pb-2 text-[10px] font-bold uppercase tracking-[0.18em] text-[#b9d7e8]">Your business</div>
             {navItems.map((item) => {
               const Icon = item.icon;
               const isActive = activeTab === item.id;
@@ -304,7 +304,7 @@ function AppContent() {
                   key={item.id}
                   onClick={() => setActiveTab(item.id)}
                   className={`flex w-full items-center justify-between rounded-xl px-3 py-2 text-xs font-medium ${
-                    isActive ? "bg-accent-soft font-semibold text-accent" : "text-muted hover:bg-[color:rgba(20,22,29,0.05)] hover:text-ink"
+                    isActive ? "bg-[#ffffff]/15 font-semibold text-[#ffffff]" : "text-[#c5d6df] hover:bg-[#ffffff]/10 hover:text-[#ffffff]"
                   }`}
                 >
                   <span className="flex items-center gap-2.5">
@@ -341,7 +341,7 @@ function AppContent() {
             </div>
           </nav>
           <div className="space-y-2">
-            <div className="glass space-y-1 rounded-xl p-3 text-xs">
+            <div className="space-y-1 rounded-2xl border border-[#ffffff]/15 bg-[#ffffff]/10 p-3 text-xs">
               <div className="flex items-center justify-between">
                 <div className="text-[10px] font-medium uppercase tracking-wide text-faint">Profile</div>
                 <span className="flex items-center gap-1 text-[10px] font-medium text-ok">
@@ -354,7 +354,7 @@ function AppContent() {
             </div>
             <button
               onClick={() => setAssistantOpen(true)}
-              className="flex w-full items-center gap-2.5 rounded-xl border border-accent/20 bg-accent-soft p-2.5 text-left hover:border-accent/40"
+              className="flex w-full items-center gap-2.5 rounded-2xl border border-[#ffffff]/20 bg-[#ffffff]/10 p-2.5 text-left hover:bg-[#ffffff]/15"
             >
               <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg bg-accent/20 text-accent">
                 <Sparkles className="h-3.5 w-3.5" />
@@ -435,7 +435,7 @@ function AppContent() {
           </div>
         )}
 
-        <main className="relative flex-1 overflow-y-auto bg-transparent p-3 pb-24 sm:p-5 lg:p-8 lg:pb-8">
+        <main className="relative flex-1 overflow-y-auto bg-canvas p-3 pb-24 sm:p-6 lg:p-10 lg:pb-10">
           <div className="relative mx-auto w-full max-w-[1440px]">
             {activeTab === "dashboard" && (
               <HomeDashboard
